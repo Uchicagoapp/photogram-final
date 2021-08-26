@@ -5,6 +5,7 @@
     </h1>
 
   <dt>Image</dt>
+
   <dd>
     <img src="<%= @the_photo.image %>">
   </dd>
@@ -130,7 +131,7 @@
 
 <h2>Comments</h2>
 
-<table>
+<table border="1">
   <tr>
     <th>Commenter</th>
     <th>Comment</th>
@@ -148,7 +149,7 @@
     </td>
 
     <td>
-      <%= a_comment.created_at %>
+      <%= time_ago_in_words(a_comment.created_at) %>
     </td>
   </tr>  
   <% end %>
